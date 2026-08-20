@@ -47,7 +47,7 @@ This will decompile, patch, rebuild, and sign the APK. Output: `DJI-Fly-FCC.apk`
 
 Uninstall the official DJI Fly app and sideload the patched APK. No root required.
 
-> Only the patcher is provided in this repo. You are encouraged to [build the APK](https://github.com/Swee1980/fly-releases/releases) yourself.
+> Only the patcher is provided in this repo. You are encouraged to build the [apk](https://github.com/Swee1980/fly-releases/releases) yourself.
 
 ## Compatibility
 
