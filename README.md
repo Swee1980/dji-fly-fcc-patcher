@@ -5,6 +5,7 @@
 ### Force FCC regulatory mode on DJI Fly for Android
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue?style=flat-square)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/Swee1980/dji-fly-fcc-patcher?style=flat-square)](https://github.com/Swee1980/dji-fly-fcc-patcher/releases)
 
 </div>
 
@@ -61,6 +62,26 @@ Other versions may work but are untested. If you test on a different version, pl
 
 The patcher uses LIEF to parse the ELF binary and Capstone to disassemble ARM64 instructions. It locates the two target functions by signature, then patches the relevant instructions to hardcode the US/FCC country code. The patched `.so` is swapped back into the APK, which is then rebuilt and signed with a debug keystore.
 
+## Project structure
+
+```
+build.py              End-to-end build script (decompile → patch → rebuild → sign)
+patcher/patch_so.py   Binary patcher (ELF parsing, disassembly, instruction patching)
+keys/                 Debug keystore for signing (auto-generated on first run)
+```
+
+## Support
+
+If this project helped you out, please consider starring the repo. It helps with visibility and lets others find it.
+
+[![Star on GitHub](https://img.shields.io/badge/Star%20on%20GitHub-%E2%AD%90-yellow?style=for-the-badge&logo=github)](https://github.com/Swee1980/dji-fly-fcc-patcher)
+
+## Contact
+
+Questions, issues, or feedback?
+
+- **GitHub Issues:** [github.com/Swee1980/dji-fly-fcc-patcher/issues](https://github.com/Swee1980/dji-fly-fcc-patcher/issues)
+
 ## License
 
-AGPL-3.0
+AGPL-3.0. See [LICENSE](LICENSE).
