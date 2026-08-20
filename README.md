@@ -55,12 +55,16 @@ Tested with the DJI RC-N3 controller and DJI Fly v1.21.8 (arm64-v8a).
 
 | Drone | Status |
 |-------|--------|
-| DJI Lito X1 | Tested |
-| DJI Air 3S | Untested |
 | DJI Air 3 | Untested |
-| DJI Mini 4 Pro | Untested |
+| DJI Air 3S | Untested |
+| DJI Avata 360 | Untested |
 | DJI Flip | Untested |
+| DJI Lito 1 | Untested |
+| DJI Lito X1 | Tested |
+| DJI Mini 4 Pro | Untested |
+| DJI Mini 5 Pro | Untested |
 | DJI Neo | Untested |
+| DJI Neo 2 | Untested |
 
 This patcher modifies the DJI Fly app on your phone. It does not modify the controller or aircraft firmware.
 
