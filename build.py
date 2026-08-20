@@ -72,17 +72,29 @@ def sign(unsigned, signed):
         ])
 
     aligned = unsigned.with_suffix(".aligned.apk")
-    if shutil.which("zipalign"):
-        run(["zipalign", "-f", "4", str(unsigned), str(aligned)])
+    zipalign = shutil.which("zipalign")
+    if not zipalign:
+        for p in Path("/tmp/android-sdk/build-tools").glob("*/zipalign"):
+            zipalign = str(p)
+            break
+    if zipalign:
+        run([zipalign, "-f", "4", str(unsigned), str(aligned)])
     else:
         shutil.copy2(unsigned, aligned)
 
-    if shutil.which("apksigner"):
+    apksigner = shutil.which("apksigner")
+    if not apksigner:
+        for p in Path("/tmp/android-sdk/build-tools").glob("*/apksigner"):
+            apksigner = str(p)
+            break
+    if apksigner:
         shutil.copy2(aligned, signed)
-        run(["apksigner", "sign",
+        run([apksigner, "sign",
              "--ks", str(KEYSTORE), "--ks-pass", f"pass:{KS_PASS}",
              "--ks-key-alias", KS_ALIAS, str(signed)])
     else:
+        print("WARNING: apksigner not found, falling back to jarsigner (V1 only)")
+        print("         Install Android SDK build-tools for V2/V3 signing")
         run(["jarsigner", "-keystore", str(KEYSTORE),
              "-storepass", KS_PASS, "-keypass", KS_PASS,
              "-signedjar", str(signed), str(aligned), KS_ALIAS])
