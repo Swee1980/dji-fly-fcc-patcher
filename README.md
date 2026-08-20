@@ -5,7 +5,6 @@
 ### Force FCC regulatory mode on DJI Fly for Android
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue?style=flat-square)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/Swee1980/dji-fly-fcc-patcher?style=flat-square)](https://github.com/Swee1980/dji-fly-fcc-patcher/releases)
 
 </div>
 
