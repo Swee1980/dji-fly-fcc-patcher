@@ -1,0 +1,6 @@
+_build/
+*.apk
+keys/
+native/
+__pycache__/
+*.pyc
