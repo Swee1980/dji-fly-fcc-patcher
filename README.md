@@ -51,11 +51,20 @@ Uninstall the official DJI Fly app and sideload the patched APK. No root require
 
 ## Compatibility
 
-| DJI Fly version | Arch | Status |
-|-----------------|------|--------|
-| v1.21.8 | arm64-v8a | Tested, working |
+Tested with the DJI RC-N3 controller and DJI Fly v1.21.8 (arm64-v8a).
 
-Other versions may work but are untested. If you test on a different version, please [open an issue](https://github.com/Swee1980/dji-fly-fcc-patcher/issues).
+| Drone | Status |
+|-------|--------|
+| DJI Lito X1 | Tested |
+| DJI Air 3S | Untested |
+| DJI Air 3 | Untested |
+| DJI Mini 4 Pro | Untested |
+| DJI Flip | Untested |
+| DJI Neo | Untested |
+
+This patcher modifies the DJI Fly app on your phone. It does not modify the controller or aircraft firmware.
+
+If you test on a drone not listed here, please [open an issue](https://github.com/Swee1980/dji-fly-fcc-patcher/issues) and let me know.
 
 ## How it works
 
